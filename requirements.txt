@@ -1,2 +1,5 @@
 opencv-python-headless
 streamlit
+libgtk2.0-dev
+
+
