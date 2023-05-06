@@ -42,7 +42,7 @@ class RunningAnalyzer:
             st.image(self.current_frame)
             
             # Wait for a key press and handle it
-            key = cv2.waitKey(1000) & 0xFF
+            key = cv2.waitKey(30) & 0xFF
             
             if key == ord("q"):
                 break
@@ -62,7 +62,7 @@ class RunningAnalyzer:
                 # Pause the video and wait for a button press
                 self.play = False
                 while True:
-                    key = cv2.waitKey(100) & 0xFF
+                    key = cv2.waitKey(10) & 0xFF
                     if key == ord("p"):
                         # Resume the video
                         self.play = True
