@@ -85,10 +85,10 @@ uploaded_file = st.file_uploader("Upload a video file")
 
 if uploaded_file is not None:
     # Analyze the video file
-    with open("land.mp4", "wb") as f:
+    with open(".mp4", "wb") as f:
         f.write(uploaded_file.getbuffer())
     
-    analyzer = RunningAnalyzer("land.mp4")
+    analyzer = RunningAnalyzer(".mp4")
     analyzer.analyze()
 
     # Display a message when the analysis is complete
