@@ -39,7 +39,7 @@ class RunningAnalyzer:
             self.current_frame = frame.copy()
             
             # Display the current frame in the window
-            st.image("Running Analyzer", self.current_frame)
+            st.image(self.current_frame)
             
             # Wait for a key press and handle it
             key = cv2.waitKey(1000) & 0xFF
@@ -75,6 +75,7 @@ class RunningAnalyzer:
         # Release the video capture and close the window
         self.cap.release()
         cv2.destroyAllWindows()
+
 # Set up the Streamlit app
 st.set_page_config(page_title="Running Analyzer", page_icon=":runner:")
 st.title("Running Analyzer")
