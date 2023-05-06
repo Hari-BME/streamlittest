@@ -4,9 +4,9 @@ Created on Fri May  5 21:51:19 2023
 
 @author: Hari
 """
-
 import cv2
 import streamlit as st
+import os
 
 class RunningAnalyzer:
     def __init__(self, video_path):
@@ -82,16 +82,17 @@ st.title("Running Analyzer")
 
 # Allow the user to upload a video file
 uploaded_file = st.file_uploader("Upload a video file")
-
 if uploaded_file is not None:
-    # Analyze the video file
-    with open(".mp4", "wb") as f:
+    # Save the uploaded file to disk
+    file_path = os.path.join(".", uploaded_file.name)
+    with open(file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
-    
-    analyzer = RunningAnalyzer(".mp4")
+    analyzer = RunningAnalyzer(file_path)
     analyzer.analyze()
-
+    
     # Display a message when the analysis is complete
     st.success("Analysis complete!")
+
+
 
 
