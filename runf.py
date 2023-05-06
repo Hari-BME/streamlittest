@@ -39,7 +39,7 @@ class RunningAnalyzer:
             self.current_frame = frame.copy()
             
             # Display the current frame in the window
-            cv2.imshow("Running Analyzer", self.current_frame)
+            st.image("Running Analyzer", self.current_frame)
             
             # Wait for a key press and handle it
             key = cv2.waitKey(1000) & 0xFF
