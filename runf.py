@@ -75,7 +75,6 @@ class RunningAnalyzer:
         # Release the video capture and close the window
         self.cap.release()
         cv2.destroyAllWindows()
-
 # Set up the Streamlit app
 st.set_page_config(page_title="Running Analyzer", page_icon=":runner:")
 st.title("Running Analyzer")
